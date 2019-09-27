@@ -1,4 +1,4 @@
-package com.design.mode.adapter;
+package com.design.pattern.adapter;
 
 public interface AdvancedMediaPlayer {
 

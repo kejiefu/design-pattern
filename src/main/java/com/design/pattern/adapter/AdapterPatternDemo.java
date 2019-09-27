@@ -1,4 +1,4 @@
-package com.design.mode.adapter;
+package com.design.pattern.adapter;
 
 /**
  * 我们有一个 MediaPlayer 接口和一个实现了 MediaPlayer 接口的实体类 AudioPlayer。默认情况下，AudioPlayer 可以播放 mp3 格式的音频文件。

@@ -1,4 +1,4 @@
-package com.design.mode.adapter;
+package com.design.pattern.adapter;
 
 /**
  * 创建实现了 MediaPlayer 接口的实体类。

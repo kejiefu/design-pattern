@@ -1,4 +1,4 @@
-package com.design.mode.adapter;
+package com.design.pattern.adapter;
 
 /**
  * 。举个真实的例子，读卡器是作为内存卡和笔记本之间的适配器。您将内存卡插入读卡器，再将读卡器插入笔记本，这样就可以通过笔记本来读取内存卡。
