@@ -48,6 +48,7 @@ public class Test {
         for (User u : arrayList1) {
             System.out.println(u.getId() + "," + u.getName());
         }
+
     }
 
 
