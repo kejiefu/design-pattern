@@ -12,12 +12,12 @@ import java.io.File;
  * @Auther kejiefu
  * @Date 2019/10/8 0008
  */
-public class AbstractFactory {
+public class FactoryMethod {
     public static void main(String[] args) {
         try {
             Product a;
-            AbstractProductFactory af;
-            af = (AbstractProductFactory) ReadXML1.getObject();
+            AbstractFactory af;
+            af = (AbstractFactory) ReadXML1.getObject();
             a = af.newProduct();
             a.show();
         } catch (Exception e) {
@@ -28,7 +28,7 @@ public class AbstractFactory {
 
 //抽象产品：提供了产品的接口
 interface Product {
-    public void show();
+     void show();
 }
 
 //具体产品1：实现抽象产品中的抽象方法
@@ -46,12 +46,12 @@ class ConcreteProduct2 implements Product {
 }
 
 //抽象工厂：提供了厂品的生成方法
-interface AbstractProductFactory {
+interface AbstractFactory {
     public Product newProduct();
 }
 
 //具体工厂1：实现了厂品的生成方法
-class ConcreteFactory1 implements AbstractProductFactory {
+class ConcreteFactory1 implements AbstractFactory {
     public Product newProduct() {
         System.out.println("具体工厂1生成-->具体产品1...");
         return new ConcreteProduct1();
@@ -59,7 +59,7 @@ class ConcreteFactory1 implements AbstractProductFactory {
 }
 
 //具体工厂2：实现了厂品的生成方法
-class ConcreteFactory2 implements AbstractProductFactory {
+class ConcreteFactory2 implements AbstractFactory {
     public Product newProduct() {
         System.out.println("具体工厂2生成-->具体产品2...");
         return new ConcreteProduct2();
@@ -74,7 +74,7 @@ class ReadXML1 {
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dFactory.newDocumentBuilder();
             Document doc;
-            doc = builder.parse(new File("com/design/pattern/factory/config1.xml"));
+            doc = builder.parse(new File("https://github.com/kejiefu/design-pattern/blob/master/src/main/java/com/design/pattern/factory/config1.xml"));
             //获取包含类名的文本节点
             NodeList nl = doc.getElementsByTagName("className");
             Node classNode = nl.item(0).getFirstChild();
