@@ -34,4 +34,7 @@ public class User {
     public void setSex(Boolean sex) {
         this.sex = sex;
     }
+
+
+
 }
