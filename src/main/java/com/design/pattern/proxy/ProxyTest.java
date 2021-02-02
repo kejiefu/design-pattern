@@ -17,6 +17,7 @@ interface Subject {
 
 //真实主题
 class RealSubject implements Subject {
+    @Override
     public void Request() {
         System.out.println("访问真实主题方法...");
     }
@@ -26,6 +27,7 @@ class RealSubject implements Subject {
 class Proxy implements Subject {
     private RealSubject realSubject;
 
+    @Override
     public void Request() {
         if (realSubject == null) {
             realSubject = new RealSubject();
